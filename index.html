@@ -198,7 +198,7 @@ var addReturn = function(){
     var nam = document.getElementById("mce-NAME").value;
     console.log(dom + nam)
 
-    document.getElementById("mce-NEXT").value = "http://localhost:8000/confirmed.html#/" + dom +"/"+nam;
+    document.getElementById("mce-NEXT").value = window.location.href+"#/" + dom +"/"+nam;
     true;
 }
 </script>
