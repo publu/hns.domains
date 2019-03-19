@@ -1,0 +1,34 @@
+.turquoise-flat { background-color: #3AD2AD }
+.turquoise-flat .secondary-bg { background-color: #35BAC1 }
+.turquoise-flat .accent-bg { background-color: #353740 }
+.turquoise-flat .primary-color { color: #FFFFFF }
+.turquoise-flat .secondary-color { color: #E4F8F3 }
+.turquoise-flat .svg-fill { fill: #FFFFFF }
+
+.turquoise-gradient { background: linear-gradient(#35BAC1, #3AD2AD) }
+.turquoise-gradient .secondary-bg { background-color: #35BAC1 }
+.turquoise-gradient .accent-bg { background-color: #353740 }
+.turquoise-gradient .primary-color { color: #FFFFFF }
+.turquoise-gradient .secondary-color { color: #E4F8F3 }
+.turquoise-gradient .svg-fill { fill: #FFFFFF }
+
+.turquoise-accent { background-color: #353740 }
+.turquoise-accent .secondary-bg { background-color: #35BAC1 }
+.turquoise-accent .accent-bg { background-color: #3AD2AD }
+.turquoise-accent .primary-color { color: #FFFFFF }
+.turquoise-accent .secondary-color { color: #E8E8E9 }
+.turquoise-accent .svg-fill { fill: #FFFFFF }
+
+.turquoise-black { background-color: #35BAC1 }
+.turquoise-black .secondary-bg { background-color: #3AD2AD }
+.turquoise-black .accent-bg { background-color: #353740 }
+.turquoise-black .primary-color { color: #FFFFFF }
+.turquoise-black .secondary-color { color: #E6F6F7 }
+.turquoise-black .svg-fill { fill: #FFFFFF }
+
+.turquoise-white { background-color: #FFFFFF }
+.turquoise-white .secondary-bg { background-color: #E4F8F3 }
+.turquoise-white .accent-bg { background-color: #353740 }
+.turquoise-white .primary-color { color: #000000 }
+.turquoise-white .secondary-color { color: #8F8F8F }
+.turquoise-white .svg-fill { fill: #3AD2AD }
