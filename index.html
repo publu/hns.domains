@@ -171,18 +171,6 @@ li.parsley-required {
             </div>
         </div>
     </section>
-    <section id="cta-5" class="section turquoise-accent" sitemeta="[object Object]" activepage="Landing">
-        <div class="container text-center">
-            <div class="col-12">
-                <h4 class="heading-lrg primary-color">Join our mailing list today!</h4>
-                <div class="mt40">
-                    <form action="https://awesomeblockchain.us16.list-manage.com/subscribe/post?u=8c24cca329b8f457a655ed73e&amp;amp;id=6b7f43c4a5" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate="novalidate" class="container-sml mailchimp flex mb20"><input type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="Your Email Address" required="required" class="mailchimp-input mobile-text-center">
-                        <div aria-hidden="true" style="position: absolute; left: -5000px;"><input type="text" name="b_3198ee66c8baf4d60aa2fee6b_d60e1830e8" tabindex="-1" value=""></div> <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="white-color button no-max-width accent-bg primary-color" value="Subscribe">
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
     <footer id="footer-6" class="section text-center turquoise-accent" sitemeta="[object Object]" activepage="Landing">
         <div class="container col-12">
             <div><a href="mailto:me@hns.domains" class="socialicons accent-bg email"></a><a href="https://github.com/publu/hns" target="_blank" class="socialicons accent-bg github"></a></div>
@@ -197,7 +185,7 @@ var addReturn = function(){
     var dom = document.getElementById("mce-DOMAIN").value;
     var nam = document.getElementById("mce-NAME").value;
     console.log(dom + nam)
-    var domm = window.location.href.replace("index", "confirmed");
+    var domm = window.location.href.replace("index.html", "");
     document.getElementById("mce-NEXT").value = domm+"#/" + dom +"/"+nam;
     true;
 }
