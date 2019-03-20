@@ -18,8 +18,8 @@ border: none;
 min-height: 0px;
 }
 </style>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
         code.hljs.javascript {
     min-height: 20px;
 }
@@ -81,10 +81,11 @@ li.parsley-required {
   background-color: #5FC9F5;
 }
 #domain{
-      padding: 45px 60px 45px 60px;
-    font-size: 7em;
+    padding: 45px 60px 45px 60px;
+    font-size: 6vw;
     border-radius: 0.2em;
     font-weight: bold;
+    width: 100%;
 }
 a.logo {
     font-size: 0.8em;
@@ -157,6 +158,9 @@ button.confetti span { position: relative; }
     right: 0.5em;
     bottom: -3em;
 }
+.rns {
+    bottom: 0px;
+}
 #domain{
       padding: 20px 40px 20px 40px;
     font-size: 8vw;
@@ -167,6 +171,12 @@ button.confetti span { position: relative; }
 .section{
   padding: 5px !important;
 }
+}
+.rns {
+  position: absolute;
+}
+.rns-header-text{
+      color: #FFFFFF;
 }
 </style>
 </head>
@@ -190,8 +200,20 @@ button.confetti span { position: relative; }
                     </h2>
                     <div class="mt40">
                         <input type="submit" name="subscribe" id="domain" class="white-color button no-max-width accent-bg primary-color" value="">
+                        <div class="rns"></div>
                         <button onclick="MakeItRain()" class="confetti"><span>CONFETTI!</span></button>
+
                     </div>
+                    <script type="text/javascript">
+                    (function() {
+                        window.rnsData = {
+                            apiKey: '8vboa1jpecsnij48'
+                        };
+                        var s = document.createElement('script');
+                        s.src = 'https://cdn.reactandshare.com/plugin/rns.js';
+                        document.body.appendChild(s);
+                    }());
+                    </script>
                 </div>
             </div>
         </section>
