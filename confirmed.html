@@ -178,6 +178,10 @@ button.confetti span { position: relative; }
 .rns-header-text{
       color: #FFFFFF;
 }
+.rns-footer {
+  display:none !important;
+  opacity: 0;
+}
 </style>
 </head>
 
@@ -194,15 +198,14 @@ button.confetti span { position: relative; }
             <div class="container mb40">
                 <div class="col-12 text-center">
                     <h1 class="heading-lrg primary-color">Congrats <span id="name"></span>!</h1>
-                    <br>
-                    <h2 class="subheading secondary-color">
-                        You'll receive a special early access email when we approach the mainnet.
-                    </h2>
-                    <div class="mt40">
+                    <div class="mt10">
+                        <h2 class="subheading secondary-color">
+                            You have reserved your spot!
+                            You should get a special early access email when we approach the mainnet.
+                        </h2>
                         <input type="submit" name="subscribe" id="domain" class="white-color button no-max-width accent-bg primary-color" value="">
                         <div class="rns"></div>
                         <button onclick="MakeItRain()" class="confetti"><span>CONFETTI!</span></button>
-
                     </div>
                     <script type="text/javascript">
                     (function() {

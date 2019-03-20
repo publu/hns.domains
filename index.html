@@ -62,7 +62,185 @@ textarea.parsley-error {
 li.parsley-required {
     display: none;
 }
+/* START TOOLTIP STYLES */
+[tooltip] {
+  position: relative; /* opinion 1 */
+}
 
+/* Applies to all tooltips */
+[tooltip]::before,
+[tooltip]::after {
+  text-transform: none; /* opinion 2 */
+  font-size: .9em; /* opinion 3 */
+  line-height: 1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  position: absolute;
+  display: none;
+  opacity: 0;
+}
+[tooltip]::before {
+  content: '';
+  border: 5px solid transparent; /* opinion 4 */
+  z-index: 1001; /* absurdity 1 */
+}
+[tooltip]::after {
+  content: attr(tooltip); /* magic! */
+  
+  /* most of the rest of this is opinion */
+  font-family: Helvetica, sans-serif;
+  text-align: center;
+  
+  /* 
+    Let the content set the size of the tooltips 
+    but this will also keep them from being obnoxious
+    */
+  min-width: 3em;
+  max-width: 21em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 1ch 1.5ch;
+  border-radius: .3ch;
+  box-shadow: 0 1em 2em -.5em rgba(0, 0, 0, 0.35);
+  background: #333;
+  color: #fff;
+  z-index: 1000; /* absurdity 2 */
+}
+
+/* Make the tooltips respond to hover */
+[tooltip]:hover::before,
+[tooltip]:hover::after {
+  display: block;
+}
+
+/* don't show empty tooltips */
+[tooltip='']::before,
+[tooltip='']::after {
+  display: none !important;
+}
+
+/* FLOW: UP */
+[tooltip]:not([flow])::before,
+[tooltip][flow^="up"]::before {
+  bottom: 100%;
+  border-bottom-width: 0;
+  border-top-color: #333;
+}
+[tooltip]:not([flow])::after,
+[tooltip][flow^="up"]::after {
+  bottom: calc(100% + 5px);
+}
+[tooltip]:not([flow])::before,
+[tooltip]:not([flow])::after,
+[tooltip][flow^="up"]::before,
+[tooltip][flow^="up"]::after {
+  left: 50%;
+  -webkit-transform: translate(-50%, -.5em);
+          transform: translate(-50%, -.5em);
+}
+
+/* FLOW: DOWN */
+[tooltip][flow^="down"]::before {
+  top: 100%;
+  border-top-width: 0;
+  border-bottom-color: #333;
+}
+[tooltip][flow^="down"]::after {
+  top: calc(100% + 5px);
+}
+[tooltip][flow^="down"]::before,
+[tooltip][flow^="down"]::after {
+  left: 50%;
+  -webkit-transform: translate(-50%, .5em);
+          transform: translate(-50%, .5em);
+}
+
+/* FLOW: LEFT */
+[tooltip][flow^="left"]::before {
+  top: 50%;
+  border-right-width: 0;
+  border-left-color: #333;
+  left: calc(0em - 5px);
+  -webkit-transform: translate(-.5em, -50%);
+          transform: translate(-.5em, -50%);
+}
+[tooltip][flow^="left"]::after {
+  top: 50%;
+  right: calc(100% + 5px);
+  -webkit-transform: translate(-.5em, -50%);
+          transform: translate(-.5em, -50%);
+}
+
+/* FLOW: RIGHT */
+[tooltip][flow^="right"]::before {
+  top: 50%;
+  border-left-width: 0;
+  border-right-color: #333;
+  right: calc(0em - 5px);
+  -webkit-transform: translate(.5em, -50%);
+          transform: translate(.5em, -50%);
+}
+[tooltip][flow^="right"]::after {
+  top: 50%;
+  left: calc(100% + 5px);
+  -webkit-transform: translate(.5em, -50%);
+          transform: translate(.5em, -50%);
+}
+
+/* KEYFRAMES */
+@-webkit-keyframes tooltips-vert {
+  to {
+    opacity: .9;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+}
+@keyframes tooltips-vert {
+  to {
+    opacity: .9;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+}
+
+@-webkit-keyframes tooltips-horz {
+  to {
+    opacity: .9;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+  }
+}
+
+@keyframes tooltips-horz {
+  to {
+    opacity: .9;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+  }
+}
+
+/* FX All The Things */ 
+[tooltip]:not([flow]):hover::before,
+[tooltip]:not([flow]):hover::after,
+[tooltip][flow^="up"]:hover::before,
+[tooltip][flow^="up"]:hover::after,
+[tooltip][flow^="down"]:hover::before,
+[tooltip][flow^="down"]:hover::after {
+  -webkit-animation: tooltips-vert 300ms ease-out forwards;
+          animation: tooltips-vert 300ms ease-out forwards;
+}
+
+[tooltip][flow^="left"]:hover::before,
+[tooltip][flow^="left"]:hover::after,
+[tooltip][flow^="right"]:hover::before,
+[tooltip][flow^="right"]:hover::after {
+  -webkit-animation: tooltips-horz 300ms ease-out forwards;
+          animation: tooltips-horz 300ms ease-out forwards;
+}
 </style>
 </head>
 
@@ -79,7 +257,7 @@ li.parsley-required {
                     <h1 class="heading-lrg primary-color">Hash Name Service</h1>
                     <h2 class="subheading secondary-color mt20">A more secure way to identify by a human-readable names rather than by a numerical addresses.</h2>
                     <div class="mt40">
-                        <form action="https://formspree.io/xadawzpm" method="post" id="mc-embedded-subscribe-form-1" onsubmit="return addReturn()" name="mc-embedded-subscribe-form" target="_blank" novalidate="novalidate" class="container-sml mailchimp flex mb20" style="flex-direction: column;">
+                        <form action="https://formspree.io/xadawzpm" method="post" id="mc-embedded-subscribe-form-1" onsubmit="return addReturn()" name="mc-embedded-subscribe-form" class="container-sml mailchimp flex mb20" style="flex-direction: column;">
                             <input type="name" required value="" name="NAME" id="mce-NAME" placeholder="Your Full Name" required="required" class="mailchimp-input mobile-text-center">
                             <input type="email" required value="" name="EMAIL" id="mce-EMAIL" placeholder="Your Email Address" required="required" class="mailchimp-input mobile-text-center">
                             <input type="hidden" name="_next" id="mce-NEXT" value="http://localhost:8000/confirmed.html" />
@@ -88,7 +266,7 @@ li.parsley-required {
                                     .hh
                                 </div>
                             </div>
-                            <input type="domain" required value="" name="DOMAIN" id="mce-DOMAIN" placeholder="name" required="required" class="mailchimp-input mobile-text-center">
+                            <input type="domain" required value="" name="DOMAIN" id="mce-DOMAIN" placeholder="name" required="required" class="mailchimp-input mobile-text-center" data-parsley-domain="">
                             <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="white-color button no-max-width accent-bg primary-color" value="Register Now">
                         </form>
                     </div>
@@ -178,16 +356,95 @@ li.parsley-required {
     </footer>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.8.1/parsley.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
 <script>
+// Initialize Firebase
+var config = {
+    apiKey: "AIzaSyBFPSyyU4dxs4VyJrQust5dkTUeUV1uqz4",
+    authDomain: "hashnameservice.firebaseapp.com",
+    databaseURL: "https://hashnameservice.firebaseio.com",
+    projectId: "hashnameservice",
+    storageBucket: "hashnameservice.appspot.com",
+    messagingSenderId: "850888270614"
+};
+firebase.initializeApp(config);
+
+
+var lots_of_stuff_already_done = false;
+
+
+Parsley.addValidator('domain', {
+    validateString: function(value) {
+        var db = firebase.firestore();
+        //      var dom = document.getElementById("mce-DOMAIN").value;
+        var docRef = db.collection("users").doc(value);
+        //return false;
+        return docRef.get().then(function(doc) {
+            if (doc.exists) {
+                console.log("Document data:", doc.data());
+                return false;
+            } else {
+                // doc.data() will be undefined in this case
+                console.log("No such document!");
+                return true;
+            }
+        });
+    },
+    messages: {
+        en: 'This domain is taken'
+    }
+});
+
 $('#mc-embedded-subscribe-form-1').parsley();
 
-var addReturn = function(){
+
+$("#mc-embedded-subscribe-form-1").submit(function(e) {
+
+    if (!lots_of_stuff_already_done) {
+        e.preventDefault();
+    }
+
+    var form = $(this);
+
+    if ($('#mc-embedded-subscribe-form-1').parsley('validate')) {
+
+        var db = firebase.firestore();
+        var dom = document.getElementById("mce-DOMAIN").value;
+        var docRef = db.collection("users").doc(dom);
+
+        return docRef.get().then(function(doc) {
+            if (doc.exists) {
+                console.log("Document data:", doc.data());
+                if (!lots_of_stuff_already_done) {
+                    alert("Sorry. This domain is taken. Please try another one.")
+                }
+            } else {
+                console.log("No such document!");
+
+                db.collection("users").doc(dom).set({
+                    name: document.getElementById("mce-EMAIL").value,
+                    Email: document.getElementById("mce-NAME").value
+                })
+                if (!lots_of_stuff_already_done) {
+                    lots_of_stuff_already_done = true;
+                    $("#mc-embedded-subscribe-form-1").submit();
+                }
+                return true;
+            }
+        }).catch(function(error) {
+            console.log("Error getting document:", error);
+            return false;
+        });
+    }
+
+});
+
+var addReturn = function() {
     var dom = document.getElementById("mce-DOMAIN").value;
     var nam = document.getElementById("mce-NAME").value;
-    console.log(dom + nam)
-    var domm = window.location.href.replace("index.html", "");
-    document.getElementById("mce-NEXT").value = domm+"#/" + dom +"/"+nam;
-    true;
+
+    var domm = "https://hns.domains/";
+    document.getElementById("mce-NEXT").value = domm + "confirmed.html#/" + dom + "/" + nam;
 }
 </script>
 
