@@ -16,6 +16,7 @@
         .team-card {
 border: none;
 min-height: 0px;
+margin: auto;
 }
 </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -241,6 +242,13 @@ li.parsley-required {
   -webkit-animation: tooltips-horz 300ms ease-out forwards;
           animation: tooltips-horz 300ms ease-out forwards;
 }
+}
+@media(max-width:600px){
+form#mc-embedded-subscribe-form-1 {
+    width: 90vw;
+    left: -40px;
+}
+}
 </style>
 </head>
 
@@ -262,7 +270,7 @@ li.parsley-required {
                             <input type="email" required value="" name="EMAIL" id="mce-EMAIL" placeholder="Your Email Address" required="required" class="mailchimp-input mobile-text-center">
                             <input type="hidden" name="_next" id="mce-NEXT" value="http://localhost:8000/confirmed.html" />
                             <div style="border: none;flex-direction: row;position:relative;">
-                                <div style="position: absolute; right: 0; top: 0; padding: 15px; font-size: 25px; font-weight: 600; padding-right: 30px;">
+                                <div style="position: absolute; right: 0;top: -10px; padding: 15px; font-size: 25px; font-weight: 600; padding-right: 30px;">
                                     .hh
                                 </div>
                             </div>
