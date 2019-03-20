@@ -176,15 +176,15 @@ button.confetti span { position: relative; }
   padding: 5px !important;
 }
 }
-.rns {
-  position: absolute;
-}
 .rns-header-text{
       color: #FFFFFF;
 }
 .rns-footer {
   display:none !important;
   opacity: 0;
+}
+.turquoise-gradient {
+    background: linear-gradient(#FF9800, #9C27B0);
 }
 </style>
 </head>
@@ -209,7 +209,6 @@ button.confetti span { position: relative; }
                         </h2>
                         <input type="submit" name="subscribe" id="domain" class="white-color button no-max-width accent-bg primary-color" value="">
                         <div class="rns"></div>
-                        <button onclick="MakeItRain()" class="confetti"><span>CONFETTI!</span></button>
                     </div>
                     <script type="text/javascript">
                     (function() {
@@ -233,14 +232,9 @@ document.getElementById("domain").value = location.hash.split("/")[1] + ".hh";
 <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.8.1/parsley.min.js"></script>
 <script>
 $('#mc-embedded-subscribe-form-1').parsley();
-
-function MakeItRain() {
-    for (var i = 0; i < 40; i++) {
+for (var i = 0; i < 50; i++) {
         create(i);
     }
-}
-
-
 function create(i) {
     var width = Math.random() * 30;
     var height = width * 0.4;
