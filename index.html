@@ -276,6 +276,11 @@ form#mc-embedded-subscribe-form-1 {
                                 </div>
                             </div>
                             <input type="domain" required value="" name="DOMAIN" id="mce-DOMAIN" placeholder="name" required="required" class="mailchimp-input mobile-text-center" data-parsley-domain="">
+                            <p style="    font-size: 12px;
+    color: gray;">
+                            <input type="checkbox" name="checkbox" value="check" required id="agree" />
+                            I have read and agree to the Terms and Conditions and Privacy Policy
+                            </p>
                             <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="white-color button no-max-width accent-bg primary-color" value="Register Now">
                         </form>
                     </div>
@@ -445,7 +450,6 @@ $("#mc-embedded-subscribe-form-1").submit(function(e) {
             return false;
         });
     }
-
 });
 
 var addReturn = function() {
