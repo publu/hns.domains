@@ -1,12 +1,12 @@
-$(document).ready(function() {
-  var addReturn = function() {
-      var dom = document.getElementById("mce-DOMAIN").value;
-      var nam = document.getElementById("mce-NAME").value;
+function addReturn() {
+    var dom = document.getElementById("mce-DOMAIN").value;
+    var nam = document.getElementById("mce-NAME").value;
 
-      var domm = "https://hns.domains/";
-      document.getElementById("mce-NEXT").value = domm + "confirmed.html#/" + dom + "/" + nam;
-  }
-  
+    var domm = "https://hns.domains/";
+    document.getElementById("mce-NEXT").value = domm + "confirmed.html#/" + dom + "/" + nam;
+}
+
+$(document).ready(function() {
   // Initialize Firebase
   var config = {
       apiKey: "AIzaSyBFPSyyU4dxs4VyJrQust5dkTUeUV1uqz4",
