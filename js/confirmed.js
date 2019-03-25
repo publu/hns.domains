@@ -1,4 +1,10 @@
 $(document).ready(function() {
+    window.rnsData = {
+        apiKey: '8vboa1jpecsnij48'
+    };
+    var s = document.createElement('script');
+    s.src = 'https://cdn.reactandshare.com/plugin/rns.js';
+    document.body.appendChild(s);
     document.getElementById("name").innerHTML = location.hash.split("/")[2];
     document.getElementById("domain").value = location.hash.split("/")[1] + ".hh";
     $('#mc-embedded-subscribe-form-1').parsley();

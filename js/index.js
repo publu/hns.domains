@@ -1,4 +1,12 @@
 $(document).ready(function() {
+  var addReturn = function() {
+      var dom = document.getElementById("mce-DOMAIN").value;
+      var nam = document.getElementById("mce-NAME").value;
+
+      var domm = "https://hns.domains/";
+      document.getElementById("mce-NEXT").value = domm + "confirmed.html#/" + dom + "/" + nam;
+  }
+  
   // Initialize Firebase
   var config = {
       apiKey: "AIzaSyBFPSyyU4dxs4VyJrQust5dkTUeUV1uqz4",
@@ -78,12 +86,4 @@ $(document).ready(function() {
           });
       }
   });
-
-  var addReturn = function() {
-      var dom = document.getElementById("mce-DOMAIN").value;
-      var nam = document.getElementById("mce-NAME").value;
-
-      var domm = "https://hns.domains/";
-      document.getElementById("mce-NEXT").value = domm + "confirmed.html#/" + dom + "/" + nam;
-  }
 });
