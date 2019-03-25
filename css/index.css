@@ -234,3 +234,13 @@ width: 90vw;
 left: -40px;
 }
 }
+
+.terms, .registernow {
+    margin-top: 15px;
+}
+
+@media screen and (max-width: 600px) {
+    .masthead.section {
+        padding: 10px !important;
+    }
+}
