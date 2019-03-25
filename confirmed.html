@@ -2,284 +2,59 @@
 <html>
 
 <head>
+    <!-- Metadata -->
     <title>Hash Name Service</title>
     <meta charSet="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="description" content="HNS offers a Hashgraph-native way to address and access resources">
     <meta property="og:image" content="">
+
+    <!-- Stylesheets -->
     <link rel="shortcut icon" href="images/9b32fb9c-ecf6-4e12-94db-a7443ed9f535.ico" />
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/color.css">
+    <link rel="stylesheet" href="css/confirmed.css">
+
+    <!-- Javascript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <style>
-        .team-card {
-border: none;
-min-height: 0px;
-}
-</style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <style>
-        code.hljs.javascript {
-    min-height: 20px;
-}
-html, body {
-    margin: 0;
-    height: 100%;
-    overflow: hidden;
-}
-input.parsley-success,
-select.parsley-success,
-textarea.parsley-success {
-  color: #468847;
-  background-color: #DFF0D8;
-  border: 1px solid #D6E9C6;
-}
-
-input.parsley-error,
-select.parsley-error,
-textarea.parsley-error {
-  color: #B94A48;
-  background-color: #F2DEDE;
-  border: 1px solid #EED3D7;
-}
-
-.parsley-errors-list {
-  margin: 2px 0 3px;
-  padding: 0;
-  list-style-type: none;
-  font-size: 0.9em;
-  line-height: 0.9em;
-  opacity: 0;
-
-  transition: all .3s ease-in;
-  -o-transition: all .3s ease-in;
-  -moz-transition: all .3s ease-in;
-  -webkit-transition: all .3s ease-in;
-}
-
-.parsley-errors-list.filled {
-  opacity: 1;
-}
-li.parsley-required {
-    display: none;
-}
-
-[class|="confetti"] {
-  position: absolute;
-}
-
-.red {
-  background-color: #E94A3F;
-}
-
-.yellow {
-  background-color: #FAA040;
-}
-
-.blue {
-  background-color: #5FC9F5;
-}
-#domain{
-    padding: 45px 60px 45px 60px;
-    font-size: 6vw;
-    border-radius: 0.2em;
-    font-weight: bold;
-    width: 100%;
-}
-a.logo {
-    font-size: 0.8em;
-}
-section {
-  padding-bottom: 200px !important;
-}
-
-button.confetti { 
-  border-radius: 50%; 
-  width: 200px;
-  height: 200px;
-  border: none;
-  color: white;
-  font-family: Avenir, Arial, sans-serif;
-  font-weight: 900;
-  font-size: 2.5rem;
-  background: red;
-  text-shadow: 0 3px 1px rgba(122,17,8,.8);
-  box-shadow: 0 8px 0 rgb(183,9,0), 
-    0 15px 20px rgba(0,0,0,.35);
-  text-transform: uppercase;
-  transition: .4s all ease-in;
-  outline: none; 
-  cursor: pointer;
-  text-align: center;
-  -webkit-user-select: none;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-      position: absolute;
-    z-index: 9999;
-    right: 0.5em;
-    bottom: -3em;
-}
-.section {
-      padding-top: 30px;
-}
-button.confetti span { position: relative; }
-/* fix for IE 11 (and IE8+, although the earlier versions are harder to address) stupidly moving the inner button text on click */
-.pressed { 
-  padding-top: 3px;
-  -webkit-transform: translateY(4px);
-          transform: translateY(4px);
-  box-shadow: 0 4px 0 rgb(183,0,0),
-    0 8px 6px rgba(0,0,0,.45);
-}
-@media(max-width:600px){
-  .reactions {
-      height: 0px;
-    opacity: 0;
-  }
-  button.confetti { 
-  bottom: 130px !important;
-  border-radius: 50%; 
-  width: 150px;
-  height: 150px;
-  border: none;
-  color: white;
-  font-family: Avenir, Arial, sans-serif;
-  font-weight: 900;
-  font-size: 1.5rem;
-  background: red;
-  text-shadow: 0 3px 1px rgba(122,17,8,.8);
-  box-shadow: 0 8px 0 rgb(183,9,0), 
-    0 15px 20px rgba(0,0,0,.35);
-  text-transform: uppercase;
-  transition: .4s all ease-in;
-  outline: none; 
-  cursor: pointer;
-  text-align: center;
-  -webkit-user-select: none;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-      position: absolute;
-    z-index: 9999;
-    right: 0.5em;
-    bottom: -3em;
-}
-.rns {
-    bottom: 0px;
-}
-#domain{
-      padding: 20px 40px 20px 40px;
-    font-size: 8vw;
-    border-radius: 0.2em;
-    font-weight: bold;
-    margin-bottom: 300px
-}
-.section{
-  padding: 5px !important;
-}
-}
-.rns-header-text{
-      color: #FFFFFF;
-}
-.rns-footer {
-  display:none !important;
-  opacity: 0;
-}
-.turquoise-gradient {
-    background: linear-gradient(#FF9800, #9C27B0);
-}
-</style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.8.1/parsley.min.js"></script>
+    <script src="js/confirmed.js"></script>
 </head>
 
+
+
 <body class="font-modern">
-    <div class="turquoise-gradient">
-        <header class="header">
-            <div class="container-lrg">
-                <div class="flex col-12 spread"><a href="https://hns.domains" class="logo logo logo__white">
-                        < Back to homepage</a> <a href="mailto:pablo@hashingsystems.com" class="nav-link secondary-color mr0">Contact
-                    </a></div>
+   <div class="turquoise-gradient">
+      <header class="header">
+         <div class="container-lrg">
+            <div class="flex col-12 spread">
+               <a href="https://hns.domains" class="logo logo logo__white">< Back to homepage
+               </a>
+               <a href="mailto:pablo@hashingsystems.com" class="nav-link secondary-color mr0">Contact
+               </a>
             </div>
-        </header>
-        <section class="section">
-            <div class="container mb40">
-                <div class="col-12 text-center">
-                    <h1 class="heading-lrg primary-color">Congrats <span id="name"></span>!</h1>
-                    <div class="mt10">
-                        <h2 class="subheading secondary-color">
-                            You have reserved your spot!
-                            You should get a special early access email when we approach the mainnet.
-                        </h2>
-                        <input type="submit" name="subscribe" id="domain" class="white-color button no-max-width accent-bg primary-color" value="">
-                        <div class="rns"></div>
-                    </div>
-                    <script type="text/javascript">
-                    (function() {
-                        window.rnsData = {
-                            apiKey: '8vboa1jpecsnij48'
-                        };
-                        var s = document.createElement('script');
-                        s.src = 'https://cdn.reactandshare.com/plugin/rns.js';
-                        document.body.appendChild(s);
-                    }());
-                    </script>
-                </div>
+         </div>
+      </header>
+      <section class="section">
+         <div class="container mb40">
+            <div class="col-12 text-center">
+               <h1 class="heading-lrg primary-color">Congrats
+                  <span id="name"></span>!
+               </h1>
+               <div class="mt10">
+                  <h2 class="subheading secondary-color">
+                     You have reserved your spot!
+                     You should get a special early access email when we approach the mainnet.
+                  </h2>
+                  <input type="submit" name="subscribe" id="domain" class="white-color button no-max-width accent-bg primary-color" value="">
+                  <div class="rns"></div>
+               </div>
             </div>
-        </section>
-    </div>
+         </div>
+      </section>
+   </div>
 </body>
-<script>
-document.getElementById("name").innerHTML = location.hash.split("/")[2];
-document.getElementById("domain").value = location.hash.split("/")[1] + ".hh";
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.8.1/parsley.min.js"></script>
-<script>
-$('#mc-embedded-subscribe-form-1').parsley();
-for (var i = 0; i < 50; i++) {
-        create(i);
-    }
-function create(i) {
-    var width = Math.random() * 30;
-    var height = width * 0.4;
-    var colourIdx = Math.ceil(Math.random() * 3);
-    var colour = "red";
-    switch (colourIdx) {
-        case 1:
-            colour = "yellow";
-            break;
-        case 2:
-            colour = "blue";
-            break;
-        default:
-            colour = "red";
-    }
-    $('<div class="confetti-' + i + ' ' + colour + '"></div>').css({
-        "width": width + "px",
-        "z-index": 9000000,
-        "height": height + "px",
-        "top": -Math.random() * 20 + "%",
-        "left": Math.random() * 100 + "%",
-        "opacity": Math.random() + 0.5,
-        "transform": "rotate(" + Math.random() * 360 + "deg)"
-    }).appendTo('body');
-
-    drop(i);
-}
-
-function drop(x) {
-    $('.confetti-' + x).animate({
-        top: "100%",
-        left: "+=" + Math.random() * 15 + "%"
-    }, Math.random() * 8000 + 1000, function() {
-        reset(x);
-    });
-}
-
-function reset(x) {
-    $('.confetti-' + x).animate({
-        "top": -Math.random() * 20 + "%",
-        "left": "-=" + Math.random() * 15 + "%"
-    }, 0, function() {
-        drop(x);
-    });
-}
-</script>
 
 </html>
