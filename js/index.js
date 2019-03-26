@@ -79,7 +79,7 @@ $(document).ready(function() {
                   return db.collection("users").where("Name", "==", mail)
                     .get()
                     .then(function(querySnapshot) {
-                        if(querySnapshot.length == 0){
+                        if(querySnapshot.size == 0){
                           if (!lots_of_stuff_already_done) {
                               lots_of_stuff_already_done = true;
                               $("#mc-embedded-subscribe-form-1").submit();
