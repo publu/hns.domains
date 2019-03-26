@@ -85,7 +85,7 @@ $(document).ready(function() {
                     .then(function(querySnapshot) {
                         if(querySnapshot.length != 0){
                             alert("This email has been registered already.")
-                            return false;
+                           // return false;
                         }else{
                             return true;
                         }
