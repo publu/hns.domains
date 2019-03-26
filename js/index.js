@@ -58,7 +58,7 @@ $(document).ready(function() {
       if ($('#mc-embedded-subscribe-form-1').parsley('validate')) {
 
           var db = firebase.firestore();
-          var dom = document.getElementById("mce-DOMAIN").value;
+          var dom = String(document.getElementById("mce-DOMAIN").value).toLowerCase();
           var mail = document.getElementById("mce-EMAIL").value;
           var docRef = db.collection("users").doc(dom);
 
