@@ -75,19 +75,18 @@ $(document).ready(function() {
                       name: document.getElementById("mce-EMAIL").value,
                       Email: document.getElementById("mce-NAME").value
                   })
-                  if (!lots_of_stuff_already_done) {
-                      lots_of_stuff_already_done = true;
-                      $("#mc-embedded-subscribe-form-1").submit();
-                  }
                   
                   return db.collection("users").where("Name", "==", mail)
                     .get()
                     .then(function(querySnapshot) {
-                        if(querySnapshot.length != 0){
-                            alert("This email has been registered already.")
-                           // return false;
-                        }else{
+                        if(querySnapshot.length == 0){
+                          if (!lots_of_stuff_already_done) {
+                              lots_of_stuff_already_done = true;
+                              $("#mc-embedded-subscribe-form-1").submit();
+                          }
                             return true;
+                        }else{
+                            alert("This email has been registered already.")
                         }
                     })
                     .catch(function(error) {
