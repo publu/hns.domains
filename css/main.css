@@ -682,3 +682,24 @@ td.hljs-ln-code {
 	color: white;
 	text-shadow: 0 2px 0 rgba(0,0,0,.1)
 }
+.faq:not(:last-of-type) {
+	border-bottom: 1px solid rgba(0,0,0,.1)
+}
+.faq-input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.faq-label {
+  cursor: pointer;
+}
+.faq-content {
+  display: none;
+}
+.faq-input:checked ~ label svg {
+	transform: rotate(180deg)
+}
+.faq-input:checked ~ .faq-content {
+  display: block;
+  border-bottom: 0;
+}
