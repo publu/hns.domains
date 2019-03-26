@@ -1,5 +1,5 @@
 function addReturn() {
-    var dom = document.getElementById("mce-DOMAIN").value;
+    var dom = document.getElementById("mce-DOMAIN").value.toLowerCase();
     var nam = document.getElementById("mce-NAME").value;
 
     var domm = "https://hns.domains/";
@@ -26,7 +26,7 @@ $(document).ready(function() {
       validateString: function(value) {
           var db = firebase.firestore();
           //      var dom = document.getElementById("mce-DOMAIN").value;
-          var docRef = db.collection("users").doc(value);
+          var docRef = db.collection("users").doc(value.toLowerCase());
           //return false;
           return docRef.get().then(function(doc) {
               if (doc.exists) {
@@ -58,7 +58,7 @@ $(document).ready(function() {
       if ($('#mc-embedded-subscribe-form-1').parsley('validate')) {
 
           var db = firebase.firestore();
-          var dom = document.getElementById("mce-DOMAIN").value;
+          var dom = document.getElementById("mce-DOMAIN").value.toLowerCase();
           var docRef = db.collection("users").doc(dom);
 
           return docRef.get().then(function(doc) {
