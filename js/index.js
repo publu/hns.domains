@@ -59,6 +59,7 @@ $(document).ready(function() {
 
           var db = firebase.firestore();
           var dom = document.getElementById("mce-DOMAIN").value;
+          var mail = document.getElementById("mce-EMAIL").value;
           var docRef = db.collection("users").doc(dom);
 
           return docRef.get().then(function(doc) {
@@ -78,7 +79,21 @@ $(document).ready(function() {
                       lots_of_stuff_already_done = true;
                       $("#mc-embedded-subscribe-form-1").submit();
                   }
-                  return true;
+                  
+                  return db.collection("users").where("Name", "==", mail)
+                    .get()
+                    .then(function(querySnapshot) {
+                        if(querySnapshot.length != 0){
+                            alert("This email has been registered already.")
+                            return false;
+                        }else{
+                            return true;
+                        }
+                    })
+                    .catch(function(error) {
+                        console.log("Error getting documents: ", error);
+                        return false;
+                    });
               }
           }).catch(function(error) {
               console.log("Error getting document:", error);
