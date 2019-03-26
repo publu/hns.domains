@@ -58,7 +58,8 @@ $(document).ready(function() {
       if ($('#mc-embedded-subscribe-form-1').parsley('validate')) {
 
           var db = firebase.firestore();
-          var dom = document.getElementById("mce-DOMAIN").value.toLowerCase();
+          var dom = String(document.getElementById("mce-DOMAIN").value).toLowerCase();
+          var mail = document.getElementById("mce-EMAIL").value;
           var docRef = db.collection("users").doc(dom);
 
           return docRef.get().then(function(doc) {
@@ -74,11 +75,24 @@ $(document).ready(function() {
                       name: document.getElementById("mce-EMAIL").value,
                       Email: document.getElementById("mce-NAME").value
                   })
-                  if (!lots_of_stuff_already_done) {
-                      lots_of_stuff_already_done = true;
-                      $("#mc-embedded-subscribe-form-1").submit();
-                  }
-                  return true;
+
+                  return db.collection("users").where("Name", "==", mail)
+                    .get()
+                    .then(function(querySnapshot) {
+                        if(querySnapshot.length == 0){
+                          if (!lots_of_stuff_already_done) {
+                              lots_of_stuff_already_done = true;
+                              $("#mc-embedded-subscribe-form-1").submit();
+                          }
+                            return true;
+                        }else{
+                            alert("This email has been registered already.")
+                        }
+                    })
+                    .catch(function(error) {
+                        console.log("Error getting documents: ", error);
+                        return false;
+                    });
               }
           }).catch(function(error) {
               console.log("Error getting document:", error);
