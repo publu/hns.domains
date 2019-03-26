@@ -276,3 +276,12 @@ left: -40px;
   opacity: 1;
   border-bottom: 1px dashed;
 }
+
+img.profile {
+  border-radius: 100%;
+  margin-bottom: 20px;
+}
+
+.profile.container {
+  align-items: flex-start;
+}
