@@ -59,7 +59,7 @@ $(document).ready(function() {
 
           var db = firebase.firestore();
           var dom = String(document.getElementById("mce-DOMAIN").value).toLowerCase();
-          var mail = document.getElementById("mce-EMAIL").value;
+          var mail = String(document.getElementById("mce-EMAIL").value).toLowerCase();
           var docRef = db.collection("users").doc(dom);
 
           return docRef.get().then(function(doc) {
