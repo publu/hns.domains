@@ -72,7 +72,7 @@ $(document).ready(function() {
                   console.log("No such document!");
 
                   db.collection("users").doc(dom).set({
-                      name: document.getElementById("mce-EMAIL").value,
+                      name: String(document.getElementById("mce-EMAIL").value).toLowerCase(),
                       Email: document.getElementById("mce-NAME").value
                   })
 
