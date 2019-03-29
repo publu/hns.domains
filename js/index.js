@@ -84,6 +84,7 @@ $(document).ready(function() {
                   return db.collection("users").where("Name", "==", mail)
                     .get()
                     .then(function(querySnapshot) {
+                      console.log(querySnapshot)
                         if(querySnapshot.size == 0){
                           if (!lots_of_stuff_already_done) {
                               lots_of_stuff_already_done = true;
