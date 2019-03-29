@@ -75,12 +75,7 @@ $(document).ready(function() {
                   }
               } else {
                   console.log("No such document!");
-
-                  db.collection("users").doc(dom).set({
-                      name: String(document.getElementById("mce-EMAIL").value).toLowerCase(),
-                      Email: document.getElementById("mce-NAME").value
-                  })
-
+                  
                   return db.collection("users").where("name", "==", mail)
                     .get()
                     .then(function(querySnapshot) {
@@ -88,6 +83,10 @@ $(document).ready(function() {
                         if(querySnapshot.size == 0){
                           if (!lots_of_stuff_already_done) {
                               lots_of_stuff_already_done = true;
+                              db.collection("users").doc(dom).set({
+                                  name: String(document.getElementById("mce-EMAIL").value).toLowerCase(),
+                                  Email: document.getElementById("mce-NAME").value
+                              })
                               $("#mc-embedded-subscribe-form-1").submit();
                           }
                             return true;
