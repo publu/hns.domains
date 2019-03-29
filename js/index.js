@@ -81,7 +81,7 @@ $(document).ready(function() {
                       Email: document.getElementById("mce-NAME").value
                   })
 
-                  return db.collection("users").where("Name", "==", mail)
+                  return db.collection("users").where("name", "==", mail)
                     .get()
                     .then(function(querySnapshot) {
                       console.log(querySnapshot)
