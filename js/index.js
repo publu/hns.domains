@@ -61,7 +61,12 @@ $(document).ready(function() {
           var dom = String(document.getElementById("mce-DOMAIN").value).toLowerCase();
           var mail = String(document.getElementById("mce-EMAIL").value).toLowerCase();
           var docRef = db.collection("users").doc(dom);
-
+          
+          if(( /[^a-zA-Z0-9]/.test( dom ) || /[^a-zA-Z0-9]/.test( dom ) )) {
+               alert('Input is not alphanumeric');
+               return false;
+            }else{
+    
           return docRef.get().then(function(doc) {
               if (doc.exists) {
                   console.log("Document data:", doc.data());
@@ -98,6 +103,7 @@ $(document).ready(function() {
               console.log("Error getting document:", error);
               return false;
           });
+          }
       }
   });
 });
