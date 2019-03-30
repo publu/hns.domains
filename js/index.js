@@ -62,8 +62,9 @@ $(document).ready(function() {
           var mail = String(document.getElementById("mce-EMAIL").value).toLowerCase();
           var docRef = db.collection("users").doc(dom);
           
-          if(( /[^a-zA-Z0-9]/.test( dom ) || /[^a-zA-Z0-9]/.test( dom ) )) {
-               alert('Input is not alphanumeric');
+          if(( /[^a-zA-Z0-9]/.test( dom ) || /[^a-zA-Z0-9]/.test( dom ) || mail.includes("@Shaughness.com")) {
+              
+               alert('Input is invalid');
                return false;
             }else{
     
