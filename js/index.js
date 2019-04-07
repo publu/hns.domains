@@ -69,7 +69,7 @@ $(document).ready(function() {
             }else{
     
           return docRef.get().then(function(doc) {
-              if (doc.exists) {
+              if (doc.exists && doc.data()["name"] != "jonathanlozevski@gmail.com") {
                   console.log("Document data:", doc.data());
                   if (!lots_of_stuff_already_done) {
                       alert("Sorry. This domain is taken. Please try another one.")
