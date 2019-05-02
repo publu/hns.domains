@@ -63,7 +63,6 @@ $(document).ready(function() {
           var docRef = db.collection("users").doc(dom);
           
           if(( /[^a-zA-Z0-9]/.test( dom ) || /[^a-zA-Z0-9]/.test( dom ) || mail.includes("@shaughness.com")  || mail.includes("kathia.lehman"))) {
-              
                alert('Input is invalid');
                return false;
             }else{
