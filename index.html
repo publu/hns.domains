@@ -1,221 +1,203 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Hash Name Service</title>
-
-    <!-- Metadata -->
-    <meta charSet="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="description" content="HNS offers a Hashgraph-native way to address and access resources">
-    <meta property="og:image" content="https://hns.domains/56275960_586676528519744_25410551236526080_n.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@HashingSystems">
-    <meta name="twitter:creator" content="@itspublu">
-    <meta name="twitter:title" content="Hash Name Service">
-    <meta name="twitter:description" content="HNS offers a Hashgraph-native way to address and access resources">
-    <meta name="twitter:image" content="https://hns.domains/img.png">
-    <link rel="shortcut icon" href="images/9b32fb9c-ecf6-4e12-94db-a7443ed9f535.ico" />
-
-    <!-- Stylesheets -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/color.css">
-    <link rel="stylesheet" href="css/index.css">
-
-    <!-- Javascript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.8.1/parsley.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
-    <script src="js/index.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/reset.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <title>Hash Name Service - Hedera Hashgraph Domain Registrar</title>
 </head>
-
-<body class="font-modern">
-   <div class="turquoise-gradient">
-      <header class="header">
-         <div class="container-lrg">
-            <div class="flex col-12 spread">
-               <a class="logo logo">
-               <img src="images/f743e4b9-6e0b-43cb-8a69-9f8b8b17cdab.png" alt="HNSCompany Logo">
-               </a>
-               <a href="mailto:pablo@hashingsystems.com" class="contact nav-link secondary-color mr0">Contact</a>
+<body style="background: #ffffff;">
+    <div class="main-container">
+        <div class="hash-name-domain bgContainer">
+            <div class="background-code">
+                <div>517.17.2.106.561.61.692.11.2.613.101.95.86.6.951.93.0.43.6.810.57.43.7.62</div>
+                <div>0.01.50.3.53.686.75.9.85.279.81.6.237.5.938.7.91.343.92.2.8.43.35.413.95.76</div>
+                <div>60.04.350.5.998.26.12.57.511.26.18.15.55.1.82.691.72.19.15.4.915.76.42.93.33</div>
+                <div>61.72.973.411.444.5508.9899.896.246.37.6604.561.6567.57.51.19.8.962.463.766</div>
+                <div>636.012.9457.00812.854.81.102.30.85.93.374.703.4.5906.6338.670.20.2.200.131.1995</div>
+                <div>517.17.2.106.561.61.692.11.2.613.101.95.86.6.951.93.0.43.6.810.57.43.7.62</div>
+                <div>0.01.50.3.53.686.75.9.85.279.81.6.237.5.938.7.91.343.92.2.8.43.35.413.95.76</div>
+                <div>60.04.350.5.998.26.12.57.511.26.18.15.55.1.82.691.72.19.15.4.915.76.42.93.33</div>
             </div>
-         </div>
-      </header>
-      <section class="masthead section">
-         <div class="container mb40">
-            <div class="col-12 text-center">
-               <h1 class="heading-lrg primary-color">Hash Name Service</h1>
-               <h2 class="subheading secondary-color mt20">A secure way to identify by a human-readable name rather than by a numerical address.</h2>
-               <div class="mt40">
-                  <form method="post" id="mc-embedded-subscribe-form-1" onsubmit="return addReturn()" name="mc-embedded-subscribe-form" class="container-sml mailchimp flex mb20 animated bounce delay-2s" style="flex-direction: column;">
-                     <input disabled type="name" required value="" name="NAME" id="mce-NAME" placeholder="Your Full Name" required="required" class="mailchimp-input mobile-text-center">
-                     <input disabled type="email" required value="" name="EMAIL" id="mce-EMAIL" placeholder="Your Email Address" required="required" class="mailchimp-input mobile-text-center">
-                     <input disabled type="hidden" name="_next" id="mce-NEXT" value="http://localhost:8000/confirmed.html" />
-                     <div style="border: none;flex-direction: row;position:relative;">
-                        <div style="position: absolute; right: 0;top: -10px; padding: 15px; font-size: 25px; font-weight: 600; padding-right: 30px;">
-                           .hh
+
+            <div class="hns-logo-div"></div>
+            <h1>Hash Name Service</h1>
+            <p>Replace cryptocurrency id's with human readable names. Register your name before someone else does!</p>
+
+            <div class="gridSection" id="gridSection1">
+                <div class="grid">
+                    <div class="stripe" id="stripe-left1"></div>
+                    <div class="stripe" id="stripe-left2"></div>
+                    <div class="stripe" id="stripe-left3"></div>
+                    <div class="stripe" id="stripe-right1"></div>
+                    <div class="stripe" id="stripe-right2"></div>
+                    <div class="stripe" id="stripe-right3"></div>
+                </div>
+            </div>
+            <div class="hns-search-div">
+                <input type="search" name="search-bar-2" id="search-bar-2" placeholder="Name your wallet">
+                <input type="button" onclick="search();">
+            </div>
+        </div>
+
+        <section class="using-hash-service">
+            <h1>Send crypto safely</h1>
+            <p>All you need to know is the recipient’s name to send a transaction.
+            </p>
+            <div class="hash-services">
+                <div class="hash-extension">
+                    <div class="feature-icon-1">
+                        <div>1</div>
+                    </div>
+                    <h3>Get Composer</h3>
+                    <p>The domain name is stored on your wallet. No one can control it around other than you.</p>
+                </div>
+                <div class="buy-domain">
+                    <div class="feature-icon-2">
+                        <div>2</div>
+                    </div>
+                    <h3>Register</h3>
+                    <p>Search for your domain name. If its available, get it! Registrations are renewed yearly</p>
+                </div>
+                <div class="hash-payments">
+                    <div class="feature-icon-3">
+                        <div>3</div>
+                    </div>
+                    <h3>Send & Receive Payments</h3>
+                    <p>To send crypto all you need to know is the recipient’s domain</p>
+                </div>
+            </div>
+        </section>
+        <hr>
+
+        <section class="about-hns">
+            <div class="about-div">
+                <div>
+                    <h3>About Us</h3>
+                    <p>We're a Hashgraph development studio bringing elemental features to distributed ledgers like Hedera Hashgraph. You can read up on Hash Name Service's white paper here and get acquainted with the platform</p>
+                    <input class="white-paper-button" onclick="openPaper();" type="submit" value="Read White Paper">
+                </div>
+
+                <div class="background-code-2">
+                    <div>
+                        61.72.973.411.444.5508.9899.5
+                        896.246.37.6604.561.6567.57.5
+                        962.463.76660.04.350.5.998.11
+                        26.12.57.511.26.18.15.55.1829
+                        76.42.93.33.463.76660.04.3.58
+                        72.19.15.4.915..112.4.691.1.8
+                    </div>
+                    <div class="margaret-div">
+                        MARGARET.HH
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-decoration">
+                <div class="d1">
+                    <div></div>
+                    <div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+                <div class="d2">
+                    <div></div>
+                    <div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-content">
+                <div class="container">
+                    <a href="https://hashingsystems.com" target="_blank" class="brand-footer">
+                        <div class="hns-logo"></div>
+                        <div>
+                            <h1>Hash Name Service</h1>
+                            <p>By Hashing Systems</p>
                         </div>
-                     </div>
-                     <input disabled type="domain" required value="" name="DOMAIN" id="mce-DOMAIN" placeholder="name" required="required" class="mailchimp-input mobile-text-center" data-parsley-domain="">
-                     <p class="terms" style="    font-size: 12px;
-                        color: gray;">
-                        <input disabled type="checkbox" name="checkbox" value="check" required id="agree" />
-                        <label class="lab" for="agree">
-                        I have read and agree to the
-                        <a href="https://hns.domains/tos.txt">Terms and Conditions</a> and
-                        <a href="https://hns.domains/privacy.txt">Privacy Policy</a>
-                        </label>
-                     </p>
-                     <input disabled style=" background: #F44336; " type="submit" name="subscribe" id="mc-embedded-subscribe" class="registernow white-color button no-max-width accent-bg primary-color" value="Registration is Closed. Stay Tuned.">
-                     <button class="registernow white-color button no-max-width accent-bg primary-color" onclick="window.open('https://www.producthunt.com/upcoming/hash-name-service','_blank','resizable=yes')">Sign up for updates here</button>
-                   </form>
-               </div>
-               <h2 class="subheading secondary-color">
-                  Reserve your Hashgraph domain today. You'll be notified when our contract goes live!
-               </h2>
+                    </a>
+
+                    <div class="hashing-logo"></div>
+                    <div class="footer-links">
+                        <a href="https://twitter.com/hashingsystems" title="Twitter" target="_blank"
+                            class="twitter social-media"></a>
+                        <a href="https://www.facebook.com/hashingsystems" title="Facebook" target="_blank"
+                            class="facebook social-media"></a>
+                    </div>
+                </div>
             </div>
-         </div>
-      </section>
-   </div>
-   <section id="feature-1" class="section turquoise-white" sitemeta="[object Object]" activepage="Landing">
-      <div class="container-lrg flex">
-         <div class="col-4 text-center flex flex-column center-horizontal">
-            <i class="icon mobile-center-icon secondary-bg">
-               <svg class="svg-fill"
-                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
-                  <path d="M12.5 21a8.496 8.496 0 0 0 8.368-7.05 1.494 1.494 0 0 0 0-2.9A8.496 8.496 0 1 0 12.5 21zm0-16a7.508 7.508 0 0 1 7.37 6.143 1.494 1.494 0 0 0 0 2.714A7.497 7.497 0 1 1 12.5 5zm0 11A3.5 3.5 0 1 0 9 12.5a3.5 3.5 0 0 0 3.5 3.5zm0-6a2.5 2.5 0 1 1-2.5 2.5 2.503 2.503 0 0 1 2.5-2.5zM25 12.5A12.5 12.5 0 1 1 2.514 5.004a2.498 2.498 0 0 0 .759.662 11.508 11.508 0 1 0 3.53-3.142 2.498 2.498 0 0 0-.575-.825A12.484 12.484 0 0 1 25 12.5zm-22-9A1.5 1.5 0 1 1 4.5 5 1.5 1.5 0 0 1 3 3.5z"></path>
-               </svg>
-            </i>
-            <h3 class="bold primary-color">Easy to use</h3>
-            <p class="feature paragraph secondary-color">Anyone can register their own namespace and connect their accounts.</p>
-         </div>
-         <div class="col-4 text-center flex flex-column center-horizontal">
-            <i class="icon mobile-center-icon secondary-bg">
-               <svg class="svg-fill"
-                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
-                  <path d="M8.354 6.146c-.951-.95-.903-3.794-.706-5.169a12.502 12.502 0 0 1 11.919 1.216 3.221 3.221 0 0 0-.981 2.017 4.127 4.127 0 0 0 1.06 3.143c.365.366.362 2.283-.19 4.116a2.2 2.2 0 0 1-4.249-.224c-.132-.676-.85-4.095-1.853-5.098-.678-.678-1.69-.364-2.67-.063-1.106.34-1.865.53-2.33.063zm12.033-3.34a2.233 2.233 0 0 0-.806 1.506 3.148 3.148 0 0 0 .772 2.335c.902.902.53 3.55.06 5.11a3.198 3.198 0 0 1-6.186-.318 12.355 12.355 0 0 0-1.58-4.585c-.251-.25-.97-.03-1.669.186-1.071.33-2.405.74-3.331-.186-1.174-1.175-1.199-3.791-1.061-5.367a12.482 12.482 0 0 0-2.52 20.22c.18-2.598.849-7.13 3.323-7.694a3.717 3.717 0 0 1 2.96.306 4.396 4.396 0 0 1 1.642 3.088c.383 2.03 1.552 3.093 2.509 3.093.647 0 1.415-1.083 2.092-2.04.857-1.209 1.743-2.46 2.908-2.46 1.662 0 2.79 1.43 3.13 3.803a12.47 12.47 0 0 0-2.243-16.997zM19.5 17c-.647 0-1.415 1.083-2.092 2.04-.857 1.209-1.743 2.46-2.908 2.46-1.622 0-3.058-1.607-3.491-3.907A3.578 3.578 0 0 0 9.8 15.155a2.796 2.796 0 0 0-2.19-.168c-1.735.397-2.467 4.412-2.59 7.512a12.446 12.446 0 0 0 16.712-1.594C21.65 18.94 21.037 17 19.5 17z"></path>
-               </svg>
-            </i>
-            <h3 class="bold primary-color">Secure</h3>
-            <p class="feature paragraph secondary-color">Domain ownership and control issued directly via smart contracts.</p>
-         </div>
-         <div class="col-4 text-center flex flex-column center-horizontal">
-            <i class="icon mobile-center-icon secondary-bg">
-               <svg class="svg-fill"
-                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
-                  <path d="M15.967 12H8.983a36.982 36.982 0 0 1 .289-4.256 24.254 24.254 0 0 0 3.203.22 24.254 24.254 0 0 0 3.203-.22A36.982 36.982 0 0 1 15.967 12zM8.285 7.598a23.844 23.844 0 0 1-6.224-2.007A12.428 12.428 0 0 0 0 12h7.983a37.857 37.857 0 0 1 .302-4.402zm.983 9.624A24.232 24.232 0 0 1 12.475 17a24.232 24.232 0 0 1 3.207.222A37 37 0 0 0 15.967 13H8.983a37 37 0 0 0 .285 4.222zM7.983 13H0a12.428 12.428 0 0 0 2.045 6.382 23.845 23.845 0 0 1 6.236-2.014A37.888 37.888 0 0 1 7.983 13zm7.555 5.21a23.18 23.18 0 0 0-6.126 0 22.718 22.718 0 0 0 .83 3.52c.753 2.259 1.664 3.27 2.233 3.27s1.48-1.011 2.234-3.27a22.718 22.718 0 0 0 .829-3.52zM9.418 6.756a23.223 23.223 0 0 0 6.114 0 22.655 22.655 0 0 0-.824-3.485C13.955 1.011 13.044 0 12.475 0s-1.48 1.011-2.234 3.27a22.655 22.655 0 0 0-.824 3.485zm7.25 10.613a23.845 23.845 0 0 1 6.237 2.014A12.428 12.428 0 0 0 24.949 13h-7.983a37.888 37.888 0 0 1-.298 4.368zM10.664.145a12.473 12.473 0 0 0-8 4.623 22.863 22.863 0 0 0 5.766 1.84A15.462 15.462 0 0 1 10.664.146zm3.621 24.71a12.472 12.472 0 0 0 8.02-4.65 22.872 22.872 0 0 0-5.78-1.847 15.512 15.512 0 0 1-2.24 6.497zm-11.64-4.65a12.472 12.472 0 0 0 8.02 4.65 15.512 15.512 0 0 1-2.24-6.497 22.872 22.872 0 0 0-5.78 1.847zM22.285 4.77a12.473 12.473 0 0 0-8-4.623 15.462 15.462 0 0 1 2.234 6.462 22.863 22.863 0 0 0 5.766-1.84zM16.966 12h7.983a12.428 12.428 0 0 0-2.06-6.41 23.844 23.844 0 0 1-6.225 2.008A37.857 37.857 0 0 1 16.966 12z"></path>
-               </svg>
-            </i>
-            <h3 class="bold primary-color">Decentralized</h3>
-            <p class="feature paragraph secondary-color">HNS core is hosted natively on hashgraph. You can trust the protocol to keep your name safe.</p>
-         </div>
-      </div>
-   </section>
-   <section id="testimonial-2" class="section turquoise-black" sitemeta="[object Object]" activepage="Landing">
-      <div class="container text-center">
-         <div class="col-12">
-            <blockquote class="heading-sml primary-color">“Leemon's gonna love this”</blockquote>
-            <div class="mt20">
-               <div class="user-image mt20 mb20" style="background-image: url(&quot;images/b4be2ba0-c419-4da6-b5f5-ee2581cb212b.png&quot;);"></div>
-               <p class="span secondary-color mb10">Ken Anderson</p>
-               <span class="span secondary-color">CHIEF DEVELOPER ADVOCATE</span>
-            </div>
-         </div>
-      </div>
-   </section>
-   <section id="faq-6" class="section turquoise-white" sitemeta="[object Object]" activepage="Landing">
-     <div class="container text-center">
-       <div class="col-12">
-         <h3 class="heading primary-color launchaco-builder-hoverable">
-           FAQ
-         </h3>
-         <p class="subheading secondary-color mt20 launchaco-builder-hoverable">Can't find an answer? Don't hesistate to reach out!</p>
-       </div>
-     </div>
-     <div class="container mt40">
-       <div class="col-12">
-         <div class="faq pad20"><input id="faq-dropdown-6-0" type="checkbox" name="faq" class="faq-input"> <label for="faq-dropdown-6-0" class="faq-label flex spread center-horizontal"><span class="bold primary-color mr20">What is it?</span> <svg width="15px" height="9px" viewBox="0 0 15 9" version="1.1" xmlns="http://www.w3.org/2000/svg" class="noshrink svg-fill">
-               <path d="M7.4176407,5.65342711 L1.76421359,8.8817842e-16 L0.350000024,1.41421356 L6.00342714,7.06764068 L6,7.07106781 L7.41421356,8.48528137 L7.4176407,8.48185424 L7.42106784,8.48528137 L8.8352814,7.07106781 L8.83185426,7.06764068 L14.4852814,1.41421356 L13.0710678,8.8817842e-16 L7.4176407,5.65342711 Z"></path>
-             </svg></label>
-           <p class="paragraph secondary-color faq-content mt20 launchaco-builder-hoverable">
-             We're a Hashgraph-native name registry. You'll be able to securely refer to smart contracts, file hashes, and accounts with human readable names.
-           </p>
-         </div>
-         <div class="faq pad20"><input id="faq-dropdown-6-1" type="checkbox" name="faq" class="faq-input"> <label for="faq-dropdown-6-1" class="faq-label flex spread center-horizontal"><span class="bold primary-color mr20">How does it work?</span> <svg width="15px" height="9px" viewBox="0 0 15 9" version="1.1" xmlns="http://www.w3.org/2000/svg" class="noshrink svg-fill">
-               <path d="M7.4176407,5.65342711 L1.76421359,8.8817842e-16 L0.350000024,1.41421356 L6.00342714,7.06764068 L6,7.07106781 L7.41421356,8.48528137 L7.4176407,8.48185424 L7.42106784,8.48528137 L8.8352814,7.07106781 L8.83185426,7.06764068 L14.4852814,1.41421356 L13.0710678,8.8817842e-16 L7.4176407,5.65342711 Z"></path>
-             </svg></label>
-           <p class="paragraph secondary-color faq-content mt20 launchaco-builder-hoverable">
-             The final architecture will be released soon. We are working with Hedera to make sure resolving costs as little as possible to make it a no-brainer solution to implement.
-           </p>
-         </div>
-         <div class="faq pad20"><input id="faq-dropdown-6-2" type="checkbox" name="faq" class="faq-input"> <label for="faq-dropdown-6-2" class="faq-label flex spread center-horizontal"><span class="bold primary-color mr20">Why is the sky blue?</span> <svg width="15px" height="9px" viewBox="0 0 15 9" version="1.1" xmlns="http://www.w3.org/2000/svg" class="noshrink svg-fill">
-               <path d="M7.4176407,5.65342711 L1.76421359,8.8817842e-16 L0.350000024,1.41421356 L6.00342714,7.06764068 L6,7.07106781 L7.41421356,8.48528137 L7.4176407,8.48185424 L7.42106784,8.48528137 L8.8352814,7.07106781 L8.83185426,7.06764068 L14.4852814,1.41421356 L13.0710678,8.8817842e-16 L7.4176407,5.65342711 Z"></path>
-             </svg></label>
-           <p class="paragraph secondary-color faq-content mt20 launchaco-builder-hoverable">
-             The sky is blue due to something called 'Rayleigh scattering'. Basically, light interacts with the air and scatters. However unlike normal scattering (like you would have with a light in a room), this scattering is proportional to the wavelength of the light. Hence higher frequency light (like blue light) is scattered more strongly, while the other colours tend to follow the path of normal sunlight!
-           </p>
-         </div>
-         <div class="faq pad20"><input id="faq-dropdown-6-3" type="checkbox" name="faq" class="faq-input"> <label for="faq-dropdown-6-3" class="faq-label flex spread center-horizontal"><span class="bold primary-color mr20">What happens when I register?</span> <svg width="15px" height="9px" viewBox="0 0 15 9" version="1.1" xmlns="http://www.w3.org/2000/svg" class="noshrink svg-fill">
-               <path d="M7.4176407,5.65342711 L1.76421359,8.8817842e-16 L0.350000024,1.41421356 L6.00342714,7.06764068 L6,7.07106781 L7.41421356,8.48528137 L7.4176407,8.48185424 L7.42106784,8.48528137 L8.8352814,7.07106781 L8.83185426,7.06764068 L14.4852814,1.41421356 L13.0710678,8.8817842e-16 L7.4176407,5.65342711 Z"></path>
-             </svg></label>
-           <p class="paragraph secondary-color faq-content mt20 launchaco-builder-hoverable">
-             When you register you sign up with your intent to get the name. This doesn't mean you are guaranteed to get it. You must finalize the registration process through the smart contract which will require a fee in HBAR. This wait list registration allows you to be notified as soon as we make our closed beta available through a special link and be one of the first to get their name.
-           </p>
-         </div>
-         <div class="faq pad20"><input id="faq-dropdown-6-4" type="checkbox" name="faq" class="faq-input"> <label for="faq-dropdown-6-4" class="faq-label flex spread center-horizontal"><span class="bold primary-color mr20">What will happen when I get the email?</span> <svg width="15px" height="9px" viewBox="0 0 15 9" version="1.1" xmlns="http://www.w3.org/2000/svg" class="noshrink svg-fill">
-               <path d="M7.4176407,5.65342711 L1.76421359,8.8817842e-16 L0.350000024,1.41421356 L6.00342714,7.06764068 L6,7.07106781 L7.41421356,8.48528137 L7.4176407,8.48185424 L7.42106784,8.48528137 L8.8352814,7.07106781 L8.83185426,7.06764068 L14.4852814,1.41421356 L13.0710678,8.8817842e-16 L7.4176407,5.65342711 Z"></path>
-             </svg></label>
-           <p class="paragraph secondary-color faq-content mt20 launchaco-builder-hoverable">
-             You need to make sure to have installed the Hedera Chrome Extension and have created (and funded) a Hedera account to pay for the record-keeping. More details to come soon.
-           </p>
-         </div>
-       </div>
-     </div>
-   </section>
-   <section id="feature-3" class="section turquoise-accent" sitemeta="[object Object]" activepage="Landing">
-      <div class="container-lrg flex">
-         <div class="secondary feature col-6">
-            <i class="icon secondary-bg">
-               <svg class="svg-fill"
-                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
-                  <path d="M22.5,21a.5.5,0,0,0,.5-.5V1.5A1.5016,1.5016,0,0,0,21.5,0H3.5A1.5016,1.5016,0,0,0,2,1.5v21A2.5,2.5,0,0,0,4.5,25h18a.5.5,0,0,0,0-1H22V21ZM6,1h6V12L9,9.75,6,12ZM21,24H4.5a1.5,1.5,0,0,1,0-3H21Z"></path>
-               </svg>
-            </i>
-            <h3 class="bold primary-color">No More Long Addresses</h3>
-            <p class="paragraph secondary-color">With this HNS, there's no need to copy or remember one's long address. You can send money to your friend money at 'evelyn.hh' instead of '302a3005...'</p>
-         </div>
-         <div class="secondary feature col-6">
-            <i class="icon secondary-bg">
-               <svg class="svg-fill" viewBox="0 0 8 15"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path d="M7.75 7.46c.247.117.305.378.12.593l-5.633 6.602c-.143.168-.209.123-.15-.087l1.395-5.034.03-.111a.373.373 0 0 0-.194-.425l-.103-.05-2.969-1.41C0 7.421-.06 7.16.122 6.944L5.694.327c.142-.169.21-.124.154.087L4.516 5.473l-.028.11a.374.374 0 0 0 .195.42l.102.049L7.75 7.46z"></path>
-               </svg>
-            </i>
-            <h3 class="bold primary-color">Natively Integrated</h3>
-            <p class="paragraph secondary-color">You can directly resolve the name via hashgraph file system if you want to. If you want to save time you can also use one of our solutions that do it for you. </p>
-         </div>
-      </div>
-   </section>
-   <footer id="footer-6" class="section text-center turquoise-accent" sitemeta="[object Object]" activepage="Landing">
-      <div class="container col-12">
-         <div>
-            <a href="mailto:support@hashingsystems.com" class="socialicons accent-bg email"></a>
-            <a href="https://github.com/publu/hns" target="_blank" class="socialicons accent-bg github"></a>
-            <a href="https://twitter.com/hashingsystems" target="_blank" class="socialicons accent-bg twitter"></a>
-         </div>
-      </div>
-   </footer>
+        </footer>
+    </div>
 </body>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-136323047-1"></script>
+<script src="https://cdn.useinfluence.co/static/influence-analytics.js?trackingId=INF-8016ik1va26wg" defer></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-136323047-1');
+window['_fs_debug'] = false;
+window['_fs_host'] = 'fullstory.com';
+window['_fs_script'] = 'fullstory.com/s/fs.js';
+window['_fs_org'] = 'HTP5J';
+window['_fs_namespace'] = 'FS';
+(function(m,n,e,t,l,o,g,y){
+    if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
+    g=m[e]=function(a,b,s){g.q?g.q.push([a,b,s]):g._api(a,b,s);};g.q=[];
+    o=n.createElement(t);o.async=1;o.crossOrigin='anonymous';o.src='https://'+_fs_script;
+    y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
+    g.identify=function(i,v,s){g(l,{uid:i},s);if(v)g(l,v,s)};g.setUserVars=function(v,s){g(l,v,s)};g.event=function(i,v,s){g('event',{n:i,p:v},s)};
+    g.shutdown=function(){g("rec",!1)};g.restart=function(){g("rec",!0)};
+    g.log = function(a,b) { g("log", [a,b]) };
+    g.consent=function(a){g("consent",!arguments.length||a)};
+    g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
+    g.clearUserCookie=function(){};
+})(window,document,window['_fs_namespace'],'script','user');
 </script>
-
+<!--- Tooltip player -->
+<script type='text/javascript'>
+window.Tooltip||function(t,e){var o={
+url:"https://cdn.tooltip.io/static/player.js",
+key:"0701dbd6-d6a9-4ec2-b474-893235919b96",
+async:true
+};
+window.Tooltip={cs:[],_apiKey:o.key};for(
+var r=["identify","goal","updateUserData","start","stop","refresh","show","hide","on"],
+i={},n=0;n<r.length;n++){var a=r[n];i[a]=function(t){return function(){var e=Array.prototype.slice.call(arguments);
+window.Tooltip.cs.push({method:t,args:e})}}(a)}window.Tooltip.API=i;var n=t.createElement(e),s=t.getElementsByTagName(e)[0];
+n.type="text/javascript",n.async=o.async,s.parentNode.insertBefore(n,s),n.src=o.url}(document,"script");
+</script>
+<!--- Tooltip player -->
+<script>
+function goodDomain(str) {
+    var code, i, len;
+    len = str.length;
+    if(str.length>20 || str.length < 1)
+    return false;
+    for (i = 0; i < len; i++) {
+    code = str.charCodeAt(i);
+    if (!(code > 47 && code < 58) && // numeric (0-9)
+        !(code > 96 && code < 123)) { // lower alpha (a-z)
+      return false;
+    }
+    }
+    return true;
+};
+function search(){
+    document.getElementById("search-bar-2").parentElement.classList.add("highlight_field");
+    window.alert("Registration will open at 10am CST on Wednesday October 2019.");
+    /*
+    let d = document.getElementById("search-bar-2").value;
+    if(goodDomain(d))
+        window.location.href = "https://manager.hns.domains/#/" + document.getElementById("search-bar-2").value;
+    else
+        document.getElementById("search-bar-2").parentElement.classList.add("highlight_field");
+    */
+}
+function openPaper(){
+    window.open('https://docs.google.com/document/d/1_uZGOaEAU-7wynainezdheE4pqeELA7bd9uSJIfG3HI/edit?usp=sharing','_blank');
+}
+</script>
 </html>

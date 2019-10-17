@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="11px" height="13px" viewBox="0 0 11 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>file</title>
+    <desc>Created with Sketch.</desc>
+    <g id="HNS-Domains" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="hns_manage" transform="translate(-562.000000, -447.000000)" stroke="#A0A6AE" stroke-width="1.1">
+            <g id="Group-6" transform="translate(250.000000, 179.000000)">
+                <g id="Group-5-Copy-3" transform="translate(0.000000, 254.000000)">
+                    <g id="Group-2" transform="translate(302.000000, 8.000000)">
+                        <g id="file" transform="translate(11.000000, 7.000000)">
+                            <path d="M5.0625,0 L1.125,0 C0.503679656,0 0,0.492486775 0,1.1 L0,9.9 C0,10.5075132 0.503679656,11 1.125,11 L7.875,11 C8.49632034,11 9,10.5075132 9,9.9 L9,3.85 L5.0625,0 Z" id="Path"></path>
+                            <polyline id="Path" points="5.0625 0 5.0625 3.85 9 3.85"></polyline>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

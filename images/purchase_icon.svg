@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>shopping-cart (1)</title>
+    <desc>Created with Sketch.</desc>
+    <g id="HNS-Domains" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.779999971" stroke-linecap="round" stroke-linejoin="round">
+        <g id="hns_domain_details" transform="translate(-984.000000, -465.000000)" stroke="#FFFFFF" stroke-width="2">
+            <g id="Group-6" transform="translate(250.000000, 189.000000)">
+                <g id="shopping-cart-(1)" transform="translate(735.000000, 277.000000)">
+                    <ellipse id="Oval" cx="6.54545455" cy="17.1428571" rx="1" ry="1"></ellipse>
+                    <ellipse id="Oval" cx="15.5454545" cy="17.1428571" rx="1" ry="1"></ellipse>
+                    <path d="M0,0 L3.27272727,0 L5.46545455,11.4771429 C5.6198757,12.291627 6.30931413,12.8730535 7.10181818,12.8571429 L15.0545455,12.8571429 C15.8470495,12.8730535 16.5364879,12.291627 16.6909091,11.4771429 L18,4.28571429 L4.09090909,4.28571429" id="Path"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

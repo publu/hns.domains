@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/reset.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <title>404 The page could not be found - Hash Name Service</title>
+</head>
+
+<body style="background: #ffffff;">
+    <div class="main-container">
+        <div class="hash-name-domain bgContainer">
+            <div class="background-code">
+                <div>517.17.2.106.561.61.692.11.2.613.101.95.86.6.951.93.0.43.6.810.57.43.7.62</div>
+                <div>0.01.50.3.53.686.75.9.85.279.81.6.237.5.938.7.91.343.92.2.8.43.35.413.95.76</div>
+                <div>60.04.350.5.998.26.12.57.511.26.18.15.55.1.82.691.72.19.15.4.915.76.42.93.33</div>
+                <div>61.72.973.411.444.5508.9899.896.246.37.6604.561.6567.57.51.19.8.962.463.766</div>
+                <div>636.012.9457.00812.854.81.102.30.85.93.374.703.4.5906.6338.670.20.2.200.131.1995</div>
+                <div>517.17.2.106.561.61.692.11.2.613.101.95.86.6.951.93.0.43.6.810.57.43.7.62</div>
+                <div>0.01.50.3.53.686.75.9.85.279.81.6.237.5.938.7.91.343.92.2.8.43.35.413.95.76</div>
+                <div>60.04.350.5.998.26.12.57.511.26.18.15.55.1.82.691.72.19.15.4.915.76.42.93.33</div>
+            </div>
+            <div class="error-img">
+            </div>
+            <h1 class="errr">404 error</h1>
+            <div class="gridSection" id="gridSection1">
+                <div class="grid">
+                    <div class="stripe" id="stripe-left1"></div>
+                    <div class="stripe" id="stripe-left2"></div>
+                    <div class="stripe" id="stripe-left3"></div>
+                    <div class="stripe" id="stripe-right1"></div>
+                    <div class="stripe" id="stripe-right2"></div>
+                    <div class="stripe" id="stripe-right3"></div>
+                </div>
+            </div>
+        </div>
+
+        <section class="about-hns">
+            <div class="about-div">
+                <div>
+                    <h3>About HNS</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip ex ea commodo consequat.</p>
+                </div>
+
+                <div class="background-code-2">
+                    <div>
+                        61.72.973.411.444.5508.9899.5
+                        896.246.37.6604.561.6567.57.5
+                        962.463.76660.04.350.5.998.11
+                        26.12.57.511.26.18.15.55.1829
+                        76.42.93.33.463.76660.04.3.58
+                        72.19.15.4.915..112.4.691.1.8
+                    </div>
+                    <div class="margaret-div">
+                        MARGARET.HH
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-decoration">
+                <div class="d1">
+                    <div></div>
+                    <div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+                <div class="d2">
+                    <div></div>
+                    <div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-content">
+                <div class="container">
+                    <a href="/" class="brand-footer">
+                        <div class="hns-logo"></div>
+                        <div>
+                            <h1>Hash Name Service</h1>
+                            <p>By Hashing Systems</p>
+                        </div>
+                    </a>
+
+                    <div class="hashing-logo"></div>
+                    <div class="footer-links">
+                        <a href="https://twitter.com/hashingsystems" title="Twitter" target="_blank"
+                            class="twitter social-media"></a>
+                        <a href="https://www.facebook.com/hashingsystems" title="Facebook" target="_blank"
+                            class="facebook social-media"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+<script>
+function goodDomain(str) {
+    var code, i, len;
+    len = str.length;
+    if(str.length>20)
+    return false;
+    for (i = 0; i < len; i++) {
+    code = str.charCodeAt(i);
+    if (!(code > 47 && code < 58) && // numeric (0-9)
+        !(code > 96 && code < 123)) { // lower alpha (a-z)
+      return false;
+    }
+    }
+    return true;
+};
+function search(){
+    let d = document.getElementById("search-bar-2").value;
+    if(goodDomain(d))
+        window.location.href = "/d/#/" + document.getElementById("search-bar-2").value;
+    else
+        document.getElementById("search-bar-2").parentElement.classList.add("highlight_field");
+}
+</script>
+</html>

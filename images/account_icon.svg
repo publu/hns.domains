@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="13px" viewBox="0 0 12 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>account_icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="HNS-Domains" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="hns_manage" transform="translate(-562.000000, -264.000000)" stroke="#88909A" stroke-width="1.2">
+            <g id="Group-6" transform="translate(250.000000, 179.000000)">
+                <g id="Group-5" transform="translate(0.000000, 71.000000)">
+                    <g id="Group-2" transform="translate(302.000000, 8.000000)">
+                        <g id="account_icon" transform="translate(11.000000, 7.000000)">
+                            <path d="M10,11 L10,9.77777778 C10,8.42774839 8.88071187,7.33333333 7.5,7.33333333 L2.5,7.33333333 C1.11928813,7.33333333 0,8.42774839 0,9.77777778 L0,11" id="Path"></path>
+                            <ellipse id="Oval" cx="5" cy="2.44444444" rx="2.5" ry="2.44444444"></ellipse>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
