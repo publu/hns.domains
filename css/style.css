@@ -42,6 +42,18 @@
   background-size: cover;
 }
 
+.hh-logo {
+  width: 150px;
+  height: 30px;
+  padding-bottom:5px;
+  background: url(../images/logo_hedera.svg) no-repeat;
+  background-size: cover;
+}
+
+a.social-media {
+    margin-top: 15px !important;
+}
+
 .search-bar {
   display: flex;
 }
