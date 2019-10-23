@@ -189,15 +189,16 @@ function goodDomain(str) {
     return true;
 };
 function search(){
+    /*
     document.getElementById("search-bar-2").parentElement.classList.add("highlight_field");
     window.alert("Registration will open at 10am CST on Friday October 25th 2019.");
-    /*
+    */
     let d = document.getElementById("search-bar-2").value;
     if(goodDomain(d))
         window.location.href = "https://manager.hns.domains/#/" + document.getElementById("search-bar-2").value;
     else
         document.getElementById("search-bar-2").parentElement.classList.add("highlight_field");
-    */
+    
 }
 function openPaper(){
     window.open('https://docs.google.com/document/d/1_uZGOaEAU-7wynainezdheE4pqeELA7bd9uSJIfG3HI/edit?usp=sharing','_blank');
