@@ -192,8 +192,10 @@ function search(){
     let d = document.getElementById("search-bar-2").value;
     if(goodDomain(d))
         window.location.href = "https://manager.hns.domains/d/#/" + document.getElementById("search-bar-2").value;
-    else
+    else{
+        alert('The domain can only include alphanumeric characters!');
         document.getElementById("search-bar-2").parentElement.classList.add("highlight_field");
+    }
 }
 function openPaper(){
     window.open('https://docs.google.com/document/d/1_uZGOaEAU-7wynainezdheE4pqeELA7bd9uSJIfG3HI/edit?usp=sharing','_blank');
