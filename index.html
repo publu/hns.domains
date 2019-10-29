@@ -193,7 +193,7 @@ function search(){
     if(goodDomain(d))
         window.location.href = "https://manager.hns.domains/d/#/" + document.getElementById("search-bar-2").value;
     else{
-        alert('The domain can only include alphanumeric characters!');
+        alert('The domain can only include **lowercase** alphanumeric characters! No spaces! or fancy? Ch@rac{ers%');
         document.getElementById("search-bar-2").parentElement.classList.add("highlight_field");
     }
 }
